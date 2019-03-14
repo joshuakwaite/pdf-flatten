@@ -22,16 +22,18 @@ Note: Windows users, please be sure GraphicsMagick and Ghostscript are installed
 
 ## Usage
 
+
+
 ```javascript
-var fs      = require('fs');
-var flattener = require('flattener');
-
-var inputBuffer   = fs.readFileSync(__dirname + '/test.pdf', err => throw new Error(err));
-
-
+const fs      = require('fs');
+const flattener = require('pdf-flatten');
+ 
+const inputBuffer   = fs.readFileSync(__dirname + '/test.pdf', err => { throw new Error(err) });
+ 
+ // the flatten() method takes a buffer as an input
 flattener.flatten(inputBuffer).then(res => {
-  console.log(res) // output is the flattened pdf via a buffer
-  fs.writeFileSync('outputFile.pdf', res, err => throw new Error(err));
+  console.log(res) // output is the flattened pdf via a buffer as well
+  fs.writeFileSync('outputFile.pdf', res, err => { throw new Error(err) });
 })
 ```
 
@@ -40,7 +42,7 @@ You can increase the conversion pixel density to your liking, the default is 200
 ```javascript
 flattener.flatten(inputBuffer, {density: 600}).then(res => {
   console.log(res) // output is the flattened pdf via a buffer
-  fs.writeFileSync('outputFile.pdf', res, err => throw new Error(err));
+  fs.writeFileSync('outputFile.pdf', res, err => { throw new Error(err) });
 })
 ```
 
