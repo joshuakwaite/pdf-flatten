@@ -25,10 +25,10 @@ Note: Windows users, please be sure GraphicsMagick and Ghostscript are installed
 
 
 ```javascript
-const fs      = require('fs');
+const fs = require('fs');
 const flattener = require('pdf-flatten');
  
-const inputBuffer   = fs.readFileSync(__dirname + '/test.pdf', err => { throw new Error(err) });
+const inputBuffer = fs.readFileSync(__dirname + '/test.pdf', err => { throw new Error(err) });
  
  // the flatten() method takes a buffer as an input
 flattener.flatten(inputBuffer).then(res => {
