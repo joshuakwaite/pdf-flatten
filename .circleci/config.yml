@@ -7,10 +7,10 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: navy-nickel-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          key: pdf-flatten-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run: npm install
       - save_cache:
-          key: navy-nickel-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          key: pdf-flatten-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
             - "node_modules"
       - run: sudo apt-get install graphicsmagick
