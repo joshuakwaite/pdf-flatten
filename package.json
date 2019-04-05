@@ -1,6 +1,6 @@
 {
   "name": "pdf-flatten",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A nodejs module for flattening a PDF file",
   "author": "Joshua Waite",
   "license": "MIT",

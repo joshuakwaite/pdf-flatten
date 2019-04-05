@@ -1,6 +1,8 @@
 # pdf-flatten
 
-A nodejs module for flattening a PDF file
+A nodejs module for flattening a PDF file. 
+
+This comes in handy when signatures, text, or images aren't sticking to a PDF file after using a tool to copy/convert a pdf like hummus or PDFTK.
 
 ## Dependencies
 - GraphicsMagick
