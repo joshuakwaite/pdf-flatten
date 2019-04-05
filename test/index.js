@@ -1,13 +1,12 @@
 "use strict";
 
 var fs = require("fs");
-var path = require("path");
-var expect = require("chai").expect();
+// var expect = require("chai").expect();
 var should = require("chai").should();
 var Flattener = require("../index.js");
 
 describe("Split and convert pdf into images", function() {
-  it("Create jpg files", function(done) {
+  it("Created a pdf file", function(done) {
 
     const fileBuf = fs.readFileSync(__dirname + '/test.pdf', err => console.log(err))
     
@@ -15,9 +14,11 @@ describe("Split and convert pdf into images", function() {
       fs.writeFile("output.pdf", res, err => {
         if (err) console.log(err);
         isFileExists("output.pdf").should.to.be.true;
+        fs.unlinkSync('output.pdf');
       });
       done();
     }).catch(err => {
+      fs.unlinkSync('output.pdf');
       if (err) console.log(err);
       done();
     })

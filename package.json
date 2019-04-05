@@ -23,7 +23,8 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "publish": "npm publish"
   },
   "keywords": [
     "flatten pdf",
