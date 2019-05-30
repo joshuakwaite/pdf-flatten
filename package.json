@@ -12,7 +12,8 @@
   "dependencies": {
     "async": "^2.6.2",
     "gm": "^1.23.1",
-    "hummus": "^1.0.95"
+    "hummus": "^1.0.104",
+    "rimraf": "^2.6.3"
   },
   "devDependencies": {
     "chai": "^4.2.0",
